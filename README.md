@@ -67,3 +67,5 @@ function main() {
 };
 ```
 
+### Download
+[createUserStates.js](https://github.com/Mic-M/iobroker.createUserStates/blob/master/createUserStates.js)
