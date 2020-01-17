@@ -5,7 +5,7 @@ Dabei können mehrere States gleichzeitig angelegt werden. Sobald alle erfolgrei
 
 Hier ist die Funktion: **[Funktion createUserStates()](https://github.com/Mic-M/iobroker.createUserStates/blob/master/createUserStates.js)**
 
-### Warum sollte ich dieses Script verwenden?
+### Warum sollte ich diese Funktion verwenden?
 ioBroker promoted seit Herbst 2019, dass States (Datenpunkte) zentral unterhalb von `0_userdata.0` in der Objektstruktur abgelegt werden sollen. Siehe u.a. hier im Forum: [0_userdata.0 - Müssen eigene Daten dort liegen?](https://forum.iobroker.net/topic/26389/0_userdata-0-m%C3%BCssen-eigene-daten-dort-liegen)
 
 `createUserStates()` ermöglicht es, Datenpunkte unterhalb von `0_userdata.0` anzulegen, was derzeit "out of the box" durch den [JavaScript-Adapter](https://github.com/ioBroker/ioBroker.javascript) noch nicht funktioniert.
