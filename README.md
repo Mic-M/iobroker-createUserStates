@@ -1,12 +1,12 @@
 # JavaScript-Funktion createUserStates()
 
-Mit diesem Script können States (Datenpunkte) unter `0_userdata.0` oder unter `javascript.x` angelegt werden. 
-Dabei können mehrere States gleichzeitig angelegt werden. Sobald alle erfolgt angelegt wurden, kann danach (per `callback`) ein beliebiger Code ausgeführt werden, also beispielsweise die Haupt-Funktion des Scripts.
+Mit diesem Script bzw. dieser Funktion können States (Datenpunkte) unter `0_userdata.0` oder unter `javascript.x` angelegt werden. 
+Dabei können mehrere States gleichzeitig angelegt werden. Sobald alle erfolgreich angelegt wurden, kann danach (per `callback`) ein beliebiger Code ausgeführt werden, also beispielsweise die Haupt-Funktion des Scripts.
 
 ### Warum sollte ich dieses Script verwenden?
-ioBroker promoted seit Herbst/Winter 2019, dass States (Datenpunkte) zentral unterhalb von `0_userdata.0` in der Objektstruktur abgelegt werden sollen. Siehe u.a. hier im Forum: [0_userdata.0 - Müssen eigene Daten dort liegen?](https://forum.iobroker.net/topic/26389/0_userdata-0-m%C3%BCssen-eigene-daten-dort-liegen)
+ioBroker promoted seit Herbst 2019, dass States (Datenpunkte) zentral unterhalb von `0_userdata.0` in der Objektstruktur abgelegt werden sollen. Siehe u.a. hier im Forum: [0_userdata.0 - Müssen eigene Daten dort liegen?](https://forum.iobroker.net/topic/26389/0_userdata-0-m%C3%BCssen-eigene-daten-dort-liegen)
 
-Dieses Script ermöglicht es, Datenpunkte unterhalb von `0_userdata.0` anzulegen, was derzeit "out of the box" durch den [JavaScript-Adapter](https://github.com/ioBroker/ioBroker.javascript) noch nicht funktioniert.
+`createUserStates()` ermöglicht es, Datenpunkte unterhalb von `0_userdata.0` anzulegen, was derzeit "out of the box" durch den [JavaScript-Adapter](https://github.com/ioBroker/ioBroker.javascript) noch nicht funktioniert.
 
 Ebenso können damit gleichzeitig auch States weiterhin unterhalb `javascript.x` angelegt werden, dabei kann man ebenso wie bei der Anlage unter `0_userdata.0` die Callback-Option nutzen, damit das weitere Script erst dann ausgeführt wird, wenn alle Datenpunkte angelegt wurden bzw. existieren.
 
@@ -66,3 +66,5 @@ function main() {
 ```
 
 
+### Script
+LINK EINFÜGEN
