@@ -69,3 +69,6 @@ function main() {
 
 ### Download
 [createUserStates.js](https://github.com/Mic-M/iobroker.createUserStates/blob/master/createUserStates.js)
+
+### Support
+ioBroker-Forum, Thread: [Vorlage Skript: Erstellen von User-Datenpunkten](https://forum.iobroker.net/topic/26839/)
