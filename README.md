@@ -1,0 +1,2 @@
+# iobroker.createUserStates
+createUserStates Script
