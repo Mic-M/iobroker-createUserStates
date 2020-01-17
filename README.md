@@ -22,7 +22,7 @@ Ebenso können damit gleichzeitig auch States weiterhin unterhalb `javascript.x`
 Wo sollen die States erstellt werden? Möglich ist: `0_userdata.0` oder `javascript.x` (also `javascript.0`, `javascript.1`, usw.)
 
 ##### 2. `force` 
-Wenn auf `true` gesetzt, dann werden die States neu erstellt und deren bestehenden Werte alle überschrieben.
+Wenn auf `true` gesetzt, dann werden auch bestehende States aktualisiert und all deren bestehenden Eigenschaften und Werte überschrieben/initialisiert.
 
 ##### 3. `statesToCreate`
 Ein Array, das die zu erstellenden Datenpunkte enthält. Siehe unten die Beispiele. Der erste Parameter ist der Name des zu erstellenden States, der 2. Parameter in geschweiften Klammern "{" und "}" sind die Eigenschaften des States ("common description" genannt), siehe [Attributes for specific object types: state](https://github.com/ioBroker/ioBroker/blob/master/doc/SCHEMA.md#state). 
