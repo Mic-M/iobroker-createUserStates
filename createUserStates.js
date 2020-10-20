@@ -3,7 +3,7 @@
  * Current Version:     https://github.com/Mic-M/iobroker.createUserStates
  * Support:             https://forum.iobroker.net/topic/26839/
  * Autor:               Mic (ioBroker) | Mic-M (github)
- * Version:             1.1 (26 January 2020)
+ * Version:             1.2 (20 October 2020)
  * Example:             see https://github.com/Mic-M/iobroker.createUserStates#beispiel
  * -----------------------------------------------
  * PLEASE NOTE: Per https://github.com/ioBroker/ioBroker.javascript/issues/474, the used function setObject() 
@@ -79,6 +79,8 @@ function createUserStates(where, force, statesToCreate, callback = undefined) {
                         if (typeof callback === 'function') { // execute if a function was provided to parameter callback
                             if (LOG_DEBUG) log('[Debug] An optional callback function was provided, which we are going to execute now.');
                             return callback();
+                        } else {  // no callback, return anyway
+                            return;
                         }
                     } else {
                         // We need to go out and continue with next element in loop.
