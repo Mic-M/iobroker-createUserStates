@@ -72,3 +72,35 @@ function main() {
 
 ### Support
 ioBroker-Forum, Thread: [Vorlage Skript: Erstellen von User-Datenpunkten](https://forum.iobroker.net/topic/26839/)
+
+### Asynchrone Variante
+
+Die Funktion `createUserStatesAsync()` verwendet die [neue Funktion `createStateAsync()`](https://forum.iobroker.net/topic/36999/neu-diverse-async-funktionen-im-javascript-adapter), um die einzelnen Datenpunkte zu erzeugen.
+
+Rückgabewert ist ein Promise, das mittels `Promise.all()` erzeugt wird, und damit aufgelöst wird sobald alle einzelnen Promises aufgelöst sind.
+
+
+#### Beispiel asynchron
+
+```
+let statesToCreateAsync = [
+    ['TestAsync.Test1', {'name':'Test 1', 'type':'int', 'read':true, 'write':true, 'role':'info', 'def':20, 'unit': '°C' }],
+    ['TestAsync.Test2', {'name':'Test 2', 'type':'string', 'read':true, 'write':true, 'role':'info', 'def':'Hello' }],
+    ['TestAsync.Test3', {'name':'Test 3', 'type':'string', 'read':true, 'write':true, 'role':'info', 'def':'Hello' }],
+];
+let statesToCreateAsyncForce = [
+        ['TestAsync.Test3', {'name':'Test 3', 'type':'string', 'read':true, 'write':true, 'role':'info', 'def':'World' }],
+];
+
+createUserStatesAsync("0_userdata.0", false, statesToCreateAsync)
+    .then(
+            () => { log("All states created successfully") },
+            () => { log("Error when creating states!") }
+         );
+
+createUserStatesAsync("0_userdata.0", true, statesToCreateAsyncForce)
+    .then(
+            () => { log("Test force states: All states created successfully") },
+            () => { log("Test force states: Error when creating states!") }
+         );
+```
